@@ -1,7 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import CardBox from './components/CardBox/CardBox';
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+
+  }, []);
+
+  async function fetchData() {
+    const res = await fetch('https://dummyjson.com/products?limit=6');
+    const json = await res.json();
+    setData(json.products);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +33,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <CardBox products={data} />
     </div>
   );
 }
