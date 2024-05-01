@@ -2,7 +2,7 @@ import style from "./ProductCard.module.css";
 
 export default function ProductCard({ item }) {
   return (
-    <div className={style.productCard}>
+    <div className={style.productCard} key={item.id}>
       <div className={style.upperBlock}>
         <p className={style.category}>{item.category}</p>
         <h3 className={style.title}>{item.title}</h3>
