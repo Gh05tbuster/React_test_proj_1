@@ -36,10 +36,12 @@ export default function CardBox({ products }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    if (validateAll())
+    if (validateAll()) {
       console.log(
-        `You have successfylly purchased ${item.title} for $${item.price}!`
+        `${name}, you have successfylly purchased ${item.title} for $${item.price}! Your contact number is ${phone}, we will contact you soon.`
       );
+      closeModal();
+    }
   }
 
   function validateName() {
@@ -68,8 +70,16 @@ export default function CardBox({ products }) {
     const valid = [];
     valid.push(validatePhone());
     valid.push(validateName());
-    if (valid.find((el) => el === 0)) return false;
-    return true;
+    return valid.every((el) => el !== 0);
+  }
+
+  function buyCheapest() {
+    const cheapestProduct = products.reduce((min, product) => {
+      if (product.price < min.price) return product;
+      return min;
+    }, products[0]);
+
+    openModal(cheapestProduct);
   }
 
   return (
@@ -122,6 +132,16 @@ export default function CardBox({ products }) {
         {products.map((product) => (
           <ProductCard item={product} onOpenModal={openModal} />
         ))}
+      </div>
+      <div className={style.buyCheapest}>
+        <Button
+          type="button"
+          onClick={buyCheapest}
+          className={"main"}
+          style={{ fontSize: "24px" }}
+        >
+          Buy cheapest
+        </Button>
       </div>
     </>
   );

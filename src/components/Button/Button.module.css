@@ -8,7 +8,15 @@
 .btn.main {
   background-color: #4bcfa0;
   color: #fff;
+  border: 2px solid transparent;
+  transition: all linear 0.1s;
 }
+
+/* .btn.main:hover {
+  background-color: #fff;
+  color: #4bcfa0;
+  border: 2px solid #4bcfa0;
+} */
 
 .btn.submit {
   text-transform: uppercase;

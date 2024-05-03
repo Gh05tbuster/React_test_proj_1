@@ -12,7 +12,6 @@
 .modalInsides {
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
   gap: 16px;
   width: 288px;
 }
@@ -80,13 +79,28 @@
   display: initial;
 }
 
-.formField {
-}
-
 .error {
   color: #e43f3f;
   font-size: 12px;
   text-align: left;
   margin-top: 3px;
   margin-left: 3px;
+}
+
+.buyCheapest button {
+  font-size: 24px;
+}
+
+.buyCheapest button:hover {
+  background-color: #fff;
+  color: #4bcfa0;
+  border: 2px solid #4bcfa0;
+}
+
+@media (max-width: 428px) {
+  .modalInsides {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30%;
+  }
 }
