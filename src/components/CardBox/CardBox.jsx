@@ -97,10 +97,18 @@ export default function CardBox({ products }) {
               <input
                 type="text"
                 placeholder="Name"
-                className={style.textInput}
+                className={`${style.textInput} ${
+                  nameError ? style.errored : ""
+                }`}
                 onChange={handleNameChange}
                 onBlur={validateName}
-                style={{ borderColor: nameError ? "#e43f3f" : "" }}
+              />
+              <img
+                src="/error.svg"
+                alt=""
+                className={`${style.errorCross} ${
+                  nameError ? "" : style.hidden
+                }`}
               />
               <p className={style.error}>{nameError}</p>
             </div>
@@ -109,10 +117,18 @@ export default function CardBox({ products }) {
               <input
                 type="text"
                 placeholder="Number"
-                className={style.textInput}
+                className={`${style.textInput} ${
+                  phoneError ? style.errored : ""
+                }`}
                 onChange={handlePhoneChange}
                 onBlur={validatePhone}
-                style={{ borderColor: phoneError ? "#e43f3f" : "" }}
+              />
+              <img
+                src="/error.svg"
+                alt=""
+                className={`${style.errorCross} ${
+                  phoneError ? "" : style.hidden
+                }`}
               />
               <p className={style.error}>{phoneError}</p>
             </div>
