@@ -81,6 +81,18 @@
   border-color: #4bcfa0;
 }
 
+.submitText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.submitText .text {
+  line-height: 20px;
+  font-size: 16px;
+}
+
 .arrow {
   display: none;
 }

@@ -137,9 +137,10 @@ export default function CardBox({ products }) {
               onClick={handleSubmit}
               className={"main submit"}
             >
-              <p className={style.submitText}>
-                Order<span className={style.arrow}> →</span>
-              </p>
+              <div className={style.submitText}>
+                <p className={style.text}>Order</p>{" "}
+                <img src="/arrow-right.svg" alt="" className={style.arrow} />
+              </div>
             </Button>
           </form>
         </div>
