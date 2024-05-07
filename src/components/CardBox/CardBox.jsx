@@ -150,6 +150,7 @@ export default function CardBox({ products }) {
           <ProductCard item={product} onOpenModal={openModal} />
         ))}
       </div>
+
       <div className={style.buyCheapest}>
         <Button
           type="button"
