@@ -1,0 +1,55 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pagination .el {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4bcfa0;
+  width: 20px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  transition: all linear 0.1s;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+}
+
+.pagination .el:hover {
+  border-color: #4bcfa0;
+  box-shadow: 0 0 10px 2px #4bcfa0;
+}
+
+.pagination .el.active::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: #4bcfa0;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
+
+.pagination .el.active {
+  cursor: default;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.pagination .arrow {
+  cursor: pointer;
+  color: #4bcfa0;
+  transition: all linear 0.1s;
+}
+
+.pagination .arrow:hover {
+  text-shadow: 0 0 10px #4bcfa0;
+}
