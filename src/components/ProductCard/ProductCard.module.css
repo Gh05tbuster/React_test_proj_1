@@ -3,7 +3,7 @@
   width: 352px;
   min-height: 256px;
   cursor: pointer;
-  border-radius: 16px;
+  border-radius: var(--big-border-radius);
   border: 2px solid #0003;
   display: flex;
   flex-direction: column;
@@ -57,7 +57,7 @@
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
-  color: #4bcfa0;
+  color: var(--primary-color);
   padding: 16px;
   border: 1px solid #0002;
   border-radius: 16px;
@@ -69,6 +69,6 @@
 
 .productCard:hover .buy {
   color: #fff;
-  border: 1px solid #4bcfa0;
-  background-color: #4bcfa0;
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
 }

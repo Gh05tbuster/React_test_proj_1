@@ -16,7 +16,7 @@ export default function ModalWindow({ isOpen, onClose, children }) {
     <div className={style.wrapper} onMouseDown={handleMouseDown}>
       <div className={style.modalWindow}>
         <div className={style.closeBtn} onClick={onClose}>
-          ×
+          <img src="/x.svg" alt="" />
         </div>
         {children}
       </div>

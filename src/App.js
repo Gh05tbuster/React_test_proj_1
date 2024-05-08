@@ -2,6 +2,7 @@ import './App.css';
 import CardBox from './components/CardBox/CardBox';
 import Pagination from './components/Pagination/Pagination';
 import { useState, useEffect } from 'react';
+import { fetchData } from './utils/helpers';
 
 function App() {
   const itemsPerPage = 6;
@@ -14,16 +15,15 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  async function fetchData(limit, page) {
-    const res = await fetch(`https://dummyjson.com/products?limit=${limit}&skip=${limit * (page - 1)}`);
-    const json = await res.json();
+  async function getData(limit, page) {
+    const json = await fetchData(`products?limit=${limit}&skip=${limit * (page - 1)}`);
     setData(json.products);
     setTotalPages(Math.ceil(json.total / limit));
   }
 
   function onPageChange(page) {
     setCurrentPage(page);
-    fetchData(itemsPerPage, page);
+    getData(itemsPerPage, page);
   }
 
   return (

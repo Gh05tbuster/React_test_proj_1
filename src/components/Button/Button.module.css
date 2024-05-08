@@ -1,12 +1,12 @@
 .btn {
   cursor: pointer;
   padding: 16px;
-  border-radius: 16px;
+  border-radius: var(--big-border-radius);
   border: 1px solid transparent;
 }
 
 .btn.main {
-  background-color: #4bcfa0;
+  background-color: var(--primary-color);
   color: #fff;
   border: 2px solid transparent;
   transition: all linear 0.1s;
