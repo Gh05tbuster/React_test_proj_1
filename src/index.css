@@ -36,3 +36,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+:root {
+  --primary-color: #4bcfa0;
+  --error-color: #e43f3f;
+  --big-border-radius: 16px;
+}

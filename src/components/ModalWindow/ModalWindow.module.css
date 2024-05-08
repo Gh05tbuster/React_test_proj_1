@@ -11,7 +11,7 @@
 }
 
 .modalWindow {
-  border-radius: 16px;
+  border-radius: var(--big-border-radius);
   position: relative;
   background-color: #fff;
   padding: 50px;
@@ -30,7 +30,6 @@
   top: -10px;
   right: -10px;
   background-color: #f2f2f2;
-  font-size: 30px;
   transition: all linear 0.1s;
 }
 
